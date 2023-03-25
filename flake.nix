@@ -1,5 +1,6 @@
 {
   description = "my minimal flake";
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
 
@@ -8,7 +9,8 @@
 
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
-  };
+  }; # inputs
+
   outputs = inputs: {
     darwinConfigurations.oro = inputs.darwin.lib.darwinSystem {
       system = "aarch64-darwin";
@@ -28,5 +30,5 @@
         }
       ];
     };
-  };
+  }; # outputs
 }
