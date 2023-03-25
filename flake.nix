@@ -1,5 +1,5 @@
 {
-  description = "my minimal flake";
+  description = "tybl system configurations";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
