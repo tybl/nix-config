@@ -8,7 +8,7 @@
       pkgs.bash
       pkgs.zsh
     ];
-    loginShell = pkgs.zsh;
+    #loginShell = pkgs.zsh;
     systemPackages = [
       pkgs.coreutils
     ];
@@ -39,8 +39,10 @@
 
   system = {
     defaults = {
-      finder.AppleShowAllExtensions = true;
       dock.autohide = true;
+      finder.AppleShowAllExtensions = true;
+      trackpad.ActuationStrength = 0; # Tap-to-click
+      trackpad.Clicking = true; # Tap-to-click
     };
     keyboard = {
       enableKeyMapping = true;

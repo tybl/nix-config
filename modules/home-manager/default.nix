@@ -17,6 +17,10 @@
   };
 
   programs = {
+#    doom-emacs = {
+#      enable = true;
+#      doomPrivateDir = ./doom.d;
+#    };
     git = {
       enable = true;
       userName = "tybl";

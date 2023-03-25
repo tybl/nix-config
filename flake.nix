@@ -9,6 +9,8 @@
 
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   }; # inputs
 
   outputs = inputs: {
@@ -24,6 +26,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.tybl.imports = [
+	      inputs.nix-doom-emacs.hmModule
 	      ./modules/home-manager
             ];
           };
